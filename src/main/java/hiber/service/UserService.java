@@ -1,6 +1,9 @@
 package hiber.service;
 
+import hiber.model.Car;
 import hiber.model.User;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
