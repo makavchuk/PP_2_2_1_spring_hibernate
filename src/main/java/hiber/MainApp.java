@@ -31,14 +31,15 @@ public class MainApp {
          System.out.println();
       }
 
-      List<User> carUsers = userService.listUsersByCar("Audi", 8888);
+      User carOwner = userService.findUserByCarParameters("Audi", 8888);
 
-      for (User user : carUsers) {
-         System.out.println("Id = " + user.getId());
-         System.out.println("First Name = " + user.getFirstName());
-         System.out.println("Last Name = " + user.getLastName());
-         System.out.println("Email = " + user.getEmail());
-         System.out.println("Car = " + user.getCar());
+      if (carOwner != null) {
+         System.out.println("*** Car owner:");
+         System.out.println("Id = " + carOwner.getId());
+         System.out.println("First Name = " + carOwner.getFirstName());
+         System.out.println("Last Name = " + carOwner.getLastName());
+         System.out.println("Email = " + carOwner.getEmail());
+         System.out.println("Car = " + carOwner.getCar());
          System.out.println();
       }
 
